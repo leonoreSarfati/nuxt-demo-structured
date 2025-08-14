@@ -4,4 +4,5 @@ export interface User {
   email?: string // Ex: "jA2gk@example.com"
   favoriteMovies: number[] // Liste des IDs de films favoris
   watchedMovies: number[] // Liste des IDs de films vus
+  watchlist: number[] // Liste des IDs de films à voir
 }

@@ -14,6 +14,11 @@
         :movie-id="movie.id"
         active-class="favorite"
       />
+      <ElementIcon
+        icon="ClockIcon"
+        :movie-id="movie.id"
+        active-class="watchlist"
+      />
     </div>
   </div>
 </template>
