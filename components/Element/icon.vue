@@ -24,6 +24,9 @@ const isActive = computed(() => {
   } else if (props.activeClass === 'favorite') {
     return userStore.user.favoriteMovies.includes(props.movieId)
   }
+  else if (props.activeClass === 'watchlist') {
+    return userStore.user.watchlist.includes(props.movieId)
+  }
   return false
 })
 
@@ -34,6 +37,9 @@ const addToList = (event: MouseEvent) => {
   } else if (props.activeClass === 'favorite') {
     userStore.addToFavorite(props.movieId)
   }
+  else if (props.activeClass === 'watchlist') {
+    userStore.addToWatchlist(props.movieId)
+  }
 }
 
 // Classe CSS à appliquer quand actif
@@ -41,6 +47,7 @@ const activeClass = computed(() => {
   const classMap: Record<string, string> = {
     HeartIcon: 'icon-liked',
     EyeIcon: 'icon-watched',
+    ClockIcon: 'icon-watchlist',
   }
 
   return classMap[props.icon] ?? 'text-primary'
@@ -66,5 +73,8 @@ const activeClass = computed(() => {
 
 .icon-watched {
   color: #22c55e;
+}
+.icon-watchlist {
+  color: #f59e0b;
 }
 </style>
