@@ -75,6 +75,4 @@ const goToDetail = () => {
   border-radius: 8px;
   backdrop-filter: blur(4px);
 }
-
-
 </style>

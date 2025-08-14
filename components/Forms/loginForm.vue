@@ -2,16 +2,13 @@
   <div class="login-form">
     <h2 class="big-title">Connexion</h2>
     <p class="text">Entrez vos identifiants pour vous connecter.</p>
-
     <input
       v-model="username"
       type="text"
       placeholder="Nom d'utilisateur"
       class="small-text"
     />
-
     <ElementButton :label="'Se connecter'" @click="handleLogin" />
-
     <p class="text-link" @click="emit('close')">Annuler</p>
   </div>
 </template>
@@ -20,7 +17,6 @@
 import { ref } from 'vue'
 import { useUsers } from '~/composables/useUsers'
 import { useUserStore } from '~/stores/userStore'
-
 
 const emit = defineEmits(['close'])
 
@@ -47,13 +43,10 @@ const handleLogin = async () => {
     const userStore = useUserStore()
 
     userStore.setUser(user)
-
-
     emit('close') // Fermer le formulaire
 
     // Redirection vers la page des films
     router.push('/movies')
-
   
   } catch (error) {
     console.error('Erreur de connexion :', error)
@@ -75,8 +68,4 @@ const handleLogin = async () => {
   flex-direction: column;
   gap: 1rem;
 }
-
-
-
-
 </style>

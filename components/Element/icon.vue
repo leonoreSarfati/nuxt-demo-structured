@@ -18,7 +18,6 @@ const IconComponent = HeroIcons[props.icon] || null
 
 const userStore = useUserStore()
 
-
 const isActive = computed(() => {
   if (props.activeClass === 'watched') {
     return userStore.user.watchedMovies.includes(props.movieId)

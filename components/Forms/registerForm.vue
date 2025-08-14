@@ -55,7 +55,4 @@ const handleRegister = async () => {
   align-items: stretch;
   text-align: left;
 }
-
-
-
 </style>

@@ -22,7 +22,6 @@ function onClose() {
   formStore.closeForm()
 }
 
-
 </script>
 
 <style scoped>
